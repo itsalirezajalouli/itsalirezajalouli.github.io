@@ -4,8 +4,6 @@ date: 2024-10-25 19:42:46
 categories: [Deep Learning]
 tags: [deep_learning]     
 ---
-description: I try to explain what i understood from Generative Adversarial Networks.
----
 # This is not a test 
 
 this is not a test, this is not a test
