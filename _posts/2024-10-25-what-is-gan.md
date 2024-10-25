@@ -1,5 +1,5 @@
 ---
-title: TITLE
+title: What is GAN
 date: 2024-10-25 19:42:46
 categories: [Deep Learning]
 tags: [deep_learning]     
