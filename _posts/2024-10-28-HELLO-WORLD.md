@@ -8,7 +8,7 @@ Hello World! Huh. I'm posting this from my terminal! in my favorite editor: Neov
 
 I like sharing what I learn... so... I guess this is what i'm gonna do in this blog from now on.
 
-I started programming less than a year ago. I was in pain, it was my only scape goat, I was depressed and broken but... for some reason after university, tired and torn apart, instead of being sad and lazzy I just opened CS50 and started learning python:
+I started programming less than a year ago. I was in pain, it was my only escape goat, I was depressed and broken but... for some reason after university, tired and torn apart, instead of being sad and lazzy I just opened CS50 and started learning python:
 
 ```python
 print('Hello World!')
