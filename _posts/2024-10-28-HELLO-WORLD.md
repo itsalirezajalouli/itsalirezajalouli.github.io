@@ -15,7 +15,7 @@ print('Hello World!')
 ```
 Yeah I know I know... I use single quotation, that's what superior men do. 
 
-after a while i was wondering where am I going with this, why am I learning this shit(sorry for cursing)? one day I saw one of my friends and told him i'm learning python, he was one of the only people who smiled at me at that time. He motivated my ass to learning more. I really love that guy to death.
+After a while i was wondering where am I going with this, why am I learning this shit(sorry for cursing)? one day I saw one of my friends and told him i'm learning python, he was one of the only people who nudged me to the right path at that time. He motivated my ass to learning more. I would really kill for that guy.
 
 Anyway, I took a machine learning book and started learning the basics, the curiousity grew and I went on and on and got deeper. I got intorduced to deep learning and I had an internship in uni working with image processing and CNNs last summer. that took me a while but i came out of that internship with a lot of practical knowledge about image processing and also a GUI software.
 
