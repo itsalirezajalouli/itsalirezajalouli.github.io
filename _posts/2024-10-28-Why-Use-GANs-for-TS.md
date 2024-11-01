@@ -10,6 +10,8 @@ tags: [Deep Learning]
 
 So why use GANs for Time Series when there are plenty of good alternatives like RNNs, LSTMs and AutoRegression Models? The loop-like structure of these makes them perfect for sequential data, doesn't it?
 
+![GANs!](/assets/images/timegan-diagram.png)
+
 ##   NOPE!
 
 The first argument about Time Series forecasting with these models is that they are fundamentally deterministic and more like regression (indication) than generation (prediction). New samples can not be randomly samples from them without external conditioning. In AutoRegression Models, we keep predicting the next timestamp as a function of previous timestamps; therefore, we only care about temporary dynamics of our dataset when we're iterating over each cell of the sequence (even LSTMs only care as far as their long-term memory or Cell state allows them).
