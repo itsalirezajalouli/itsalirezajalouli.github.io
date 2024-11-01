@@ -4,7 +4,7 @@ title: Why Use GANs for Time Series?! Also How?
 categories: [Deep Learning]
 tags: [Deep Learning]
 ---
->I know I'm bad at remembering and articulating stuff I learned so I decided to write stuff here, if I suck at grammar or suffer from lack of vocabulary variety... DEAL WITH IT, it's my blog!
+>I'm bad at remembering and articulating stuff I learned so I decided to write stuff here, if I suck at grammar or suffer from lack of vocabulary variety... DEAL WITH IT, it's my blog!
 
 ##   INTRO
 
@@ -32,29 +32,31 @@ Time Series GANs come in two variants: **Discrete** and **Continuous**. GANs str
 
 #### Discrete Variants:
 
-- **SeqGAN**: This one was made to fix the discrete backprop problem. Here G is a LSTM, D is a CNN, and G's gradient gets updated by a policy gradient and Monte Carlo Search 
+- **SeqGAN**: This one was made to fix the discrete backprop problem. Here G is a LSTM, D is a CNN, and G's gradient gets updated by a policy gradient and Monte Carlo Search.
 - **QuantGAN**: This one came along to capture those long-term dependencies (long long long-term memories) which LSTMs couldn't preserve. Both G & D are temporal convolutional networks with skip connections. Authors claim they can outperform other conventional mathematical finance models.
 
 #### Continuous Variants:
-- **RNN-GAN**: The generator is an RNN and the Discriminator is a bi-directional RNN which allows D to interpret G's generated sequence in both directions. The RNNs here were two stacked LSTMs with 350 hidden layers.
+- **RNN-GAN**: The generator is an RNN and the Discriminator is a bi-directional RNN which allows D to interpret G's generated sequence in both directions. The RNNs here were two stacked LSTMs with 350 hidden units in each layer.
 - **C-RNN-GAN**: This one is the previous one but with backpropagation through time(wtf?). They applied a lot of optimization techniques to prevent one model from getting stronger than the other, and then trained it on a bunch of midi files from 160 composers to generate music. Unlike their math in the paper, their music doesn't suck...
 - **TimeGAN**: Combines unsupervised GAN with a supervised AR model and aims to generate time series with preserved temporal dynamics. I also don't understand what that means but imagine an auto-encoder with the encoded data in the middle of the architecture stolen to calculate G's loss. This turned out to be successful among state-of-the-art TS-GANs.
 
 There are two other better continuous variants of TS-GANs but I'm gonna completely ignore them cause I don't understand their complexity. TBH I already don't understand a lot of what I've talked about. 
 
-##   HOW TO FIX THIS SHIT?
+##   HOW TO FIX THIS MADNESS?
 
-Look, I yapped about temporal dynamics a lot in this article, but why is this a big problem? Isn't there a way to fix this? Problem with time-series data is the fact that they tend to get very large and they make the adversarial learning space very high-dimensional. Meaning the long-term dynamics are very large for model to process and keep, therefore making the learning process a pain in the lower back. The way to fix this is an **Embedding Network**.
+Look, I yapped about temporal dynamics a lot in this post, but why is this a big problem? Isn't there a way to fix this? Problem with time-series data is the fact that they tend to get very large and they make the adversarial learning space very high-dimensional. Meaning the long-term dynamics are very large for model to process and keep, therefore making the learning process a pain in the lower back. The way to fix this is an **Embedding Network**.
 
 Isn't that familiar?! I just introduced the network that does it... COME ON! TimeGAN.
 
 ##   TIME-GAN: INTRO
 
-Your voice is a time-series data. Also your mom's voice! But there are two kinds of features to the voice:
+Your voice is a time-series data. But there are two kinds of features to the voice:
 - **Static features (S)**: Don't change over time like gender of your voice (You don't suddenly sound like a girl unless you got hit in the crutch)
 - **Temporal features (X)**: Like the way you pronounce a word (You may say hello differently next time)
 
-Our goal is to learn a distribution density like *p'(S, X)* that best imitates *p(S, X)* a.k.a the main dataset's distribution. Depending on the lengths and dimensionality of data, this can be difficult to optimize in the original GAN, so we add a conditional term to approximate better -> *p(X[t] | S, X[1:t-1])*. 
+Our goal is to learn a distribution density like `*p'(S, X)*` that best imitates `*p(S, X)*` a.k.a the main dataset's distribution. Depending on the lengths and dimensionality of data, this can be difficult to optimize in the original GAN, so we add a conditional term to approximate better:
+
+`*p(X[t] | S, X[1:t-1])*` 
 
 This concludes in two sections of network: 
 1. One relies on the presence of a perfect adversary
