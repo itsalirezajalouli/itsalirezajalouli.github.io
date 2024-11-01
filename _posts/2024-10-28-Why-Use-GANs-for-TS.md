@@ -44,6 +44,8 @@ There are two other better continuous variants of TS-GANs but I'm gonna complete
 
 ##   HOW TO FIX THIS MADNESS?
 
+![Fix it!](/assets/images/fix.png)
+
 Look, I yapped about temporal dynamics a lot in this post, but why is this a big problem? Isn't there a way to fix this? Problem with time-series data is the fact that they tend to get very large and they make the adversarial learning space very high-dimensional. Meaning the long-term dynamics are very large for model to process and keep, therefore making the learning process a pain in the lower back. The way to fix this is an **Embedding Network**.
 
 Isn't that familiar?! I just introduced the network that does it... COME ON! TimeGAN.
@@ -54,9 +56,9 @@ Your voice is a time-series data. But there are two kinds of features to the voi
 - **Static features (S)**: Don't change over time like gender of your voice (You don't suddenly sound like a girl unless you got hit in the crutch)
 - **Temporal features (X)**: Like the way you pronounce a word (You may say hello differently next time)
 
-Our goal is to learn a distribution density like `*p'(S, X)*` that best imitates `*p(S, X)*` a.k.a the main dataset's distribution. Depending on the lengths and dimensionality of data, this can be difficult to optimize in the original GAN, so we add a conditional term to approximate better:
+Our goal is to learn a distribution density like `p'(S, X)` that best imitates `p(S, X)` a.k.a the main dataset's distribution. Depending on the lengths and dimensionality of data, this can be difficult to optimize in the original GAN, so we add a conditional term to approximate better:
 
-`*p(X[t] | S, X[1:t-1])*` 
+`p(X[t] | S, X[1:t-1])` 
 
 This concludes in two sections of network: 
 1. One relies on the presence of a perfect adversary
