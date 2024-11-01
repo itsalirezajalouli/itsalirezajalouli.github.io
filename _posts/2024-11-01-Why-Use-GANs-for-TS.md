@@ -8,7 +8,7 @@ tags: [Deep Learning]
 
 ##   INTRO
 
-So why use GANs for Time Series when there are plenty of good alternatives like RNNs, LSTMs and AutoRegression Models? The loop-like structure of these makes them perfect for sequential data, doesn't it?
+So why use GANs for Time Series when there are plenty of good alternatives like RNNs, LSTMs and AutoRegression Models? The loop-like structure of these models makes them perfect for sequential data, doesn't it?
 
 ![GANs!](/assets/images/gan.png)
 
