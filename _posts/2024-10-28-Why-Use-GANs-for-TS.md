@@ -68,3 +68,5 @@ So your network learns how to save memory optimally, learn representations optim
 There are two spaces here we should talk about the fearure space and the latent space, latent space is between the bottlenecks of an auto-encoder, in that space the only thing we find is the underlying dynamics. The meaning, The pattern, The essence of what makes data the way it is. Now Embedding function takes the static and temporal features to deep water (Khabib mentioned) and lets them discover their real selves. Embedding function in this model is a recurrent neural network but they can differ and Recovery has to only get our features out of the deep water and back to reality.
 
 Now those embeddings, in between the bottlenecks are gonna be fed as the reality to the Discriminator, cause they are reality but compressed and NO BS.
+
+![TimeGAN Architecture](/assets/images/timegan-diagram.png)
