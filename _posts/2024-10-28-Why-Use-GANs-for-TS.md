@@ -22,6 +22,8 @@ The second argument against them is that they introduce no randomness to predict
 
 ##   LET THE MAN COOK!
 
+![Hollup!](/assets/images/hollup.jpg)
+
 GANs aren't that perfect either; they are inherently unstable models. They have problems like non-convergence and vanishing gradients (meaning Discriminator is way more successful than Generator so G keeps losing and thus learns nothing), and mode collapses (when G learns to fool D with only one class of the data and stops learning more and keeps sending that variant repeatedly to the D) which are not completely solved yet. Also Contrary to image-based GANs, there is no unified metric for TS GANs (LMAO! image-based GANs evaluation metric is human's eye), and that makes their performance evaluation subjective. GANs for TS has been mentioned by a lot of papers in past few years, but now it's getting more attention and becoming a growing body of research... I promise!
 
 ##   VARIANTS OF TIME SERIES BASED GANS
