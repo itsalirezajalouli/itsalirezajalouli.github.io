@@ -1,5 +1,5 @@
 ---
-title: I'm Making a LLM
+title: I'm Making a LLM. pt.1
 layout: default
 ---
 # Intro
@@ -16,4 +16,8 @@ of DL and been suffocating in computer vision for a while, now it's time for a
 fresh start, hence I'm starting a new project and I'll be happy if you want to 
 join me to.
 
-The project is: Building a Large Language Model from scratch.
+The project is: **Building a Large Language Model from scratch.**
+
+
+# Word Embedding
+Words are categorical, probably the biggest category space you can image.
