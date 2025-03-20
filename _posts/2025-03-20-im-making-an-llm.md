@@ -21,3 +21,6 @@ The project is: **Building a Large Language Model from scratch.**
 
 # Word Embedding
 Words are categorical, probably the biggest category space you can image.
+We want to do mathematical operations to this words, but is that even possible?
+well in order to do that you need to convert this words to numbers, using some
+kind of specific or pre-trained neural network
