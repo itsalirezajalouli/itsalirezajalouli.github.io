@@ -16,7 +16,7 @@ timezone:
 
 title: Billy Pu$h3r # the main title
 
-tagline: $ ~/ Room temp iq expert at deez learning & code spaghettification! # it will display as the subtitle
+tagline:  $ Room temp iq expert at deez learning & code spaghettification with rust & python. # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   I write everything i find interesting or useful here...
@@ -34,8 +34,11 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
+  author: Billy Pu$h3r
   name: Alireza Jalouli
   email: billypushr@gmail.com # change to your email address
+  avatar: /assets/images/push3r.jpg
+
   links:
     # The first element serves as the copyright owner's link
     - https://x.com/billypush3r # change to your Twitter homepage
@@ -98,7 +101,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://pbs.twimg.com/profile_images/1849839453608595456/Jxa_qKfE_400x400.jpg
+avatar: /assets/images/push3r.jpg
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
 social_preview_image: # string, local or CORS resources
