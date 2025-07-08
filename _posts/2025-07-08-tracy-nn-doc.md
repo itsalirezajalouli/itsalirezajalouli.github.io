@@ -2,7 +2,7 @@
 layout: post
 title:  "Tracy NN Documentation"
 date:   2025-06-07 19:10:00 +0330
-categories: [update]
+categories: [docs]
 ---
 
 # What is Tracy NN:
